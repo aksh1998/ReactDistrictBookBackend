@@ -137,6 +137,12 @@ app.delete("/api/records/:id", (req, res) => {
   });
 });
 
+app.get("/", (req, res) => {
+  console.log(req)
+
+  res.json("welcome to api");
+});
+
 // Start the server
 app.listen(3009, () => {
   console.log("Server started on port 3009");
