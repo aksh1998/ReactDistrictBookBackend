@@ -8,7 +8,10 @@ import {db} from "./db.js"
 
 const app = express();
 
-app.use(express.json());
+app.use("/", (req, res) => {
+  res.json({ message: "Hello From Express App" });
+});
+
 app.use(cors());
 
 // API endpoint for fetching a single record by ID
